@@ -1,0 +1,20 @@
+# Use Python as the base image
+FROM python:3.9-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the script to the container
+COPY request_letter.py /app
+
+# Install required dependencies
+RUN pip install requests
+
+# Expose port 5000, if needed for internal reference (ACA does not require exposed ports for external access)
+EXPOSE 5000
+
+# Set the environment variable for Azure Container Apps
+ENV ENVIRONMENT=containerapps
+
+# Run the script to fetch the letter
+CMD ["python", "request_letter.py"]

@@ -1,0 +1,20 @@
+# Use Python as the base image
+FROM python:3.9-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the script
+COPY request_letter.py /app
+
+# Install requests and flask
+RUN pip install requests
+
+# Expose port 5000 for Flask
+EXPOSE 5000
+
+# Set the environment variable
+ENV ENVIRONMENT=aci
+
+# Run the Flask app
+CMD ["python", "request_letter.py"]

@@ -1,0 +1,17 @@
+# Use Python as the base image
+FROM python:3.9-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the script
+COPY request_letter.py /app
+
+# Install requests
+RUN pip install requests
+
+#set environment
+ENV ENVIRONMENT=local
+
+# Run the script with 'local' as the environment
+CMD ["python", "request_letter.py"]
