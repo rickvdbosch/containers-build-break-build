@@ -13,10 +13,10 @@ Azure Container Registry (ACR): You’ll use your own ACR to store container ima
 ## 1. Clone the Repository
 First, clone the repository to your local workstation:
 
-bash
+
 Copy code
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+'git clone https://github.com/rickvdbosch/containers-build-break-build.git'
+'cd your-repo'
 ## 2. Set Up Your Azure Container Registry (ACR)
 Create a Resource Group (if you don’t have one):
 
