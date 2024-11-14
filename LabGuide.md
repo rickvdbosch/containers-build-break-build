@@ -1,22 +1,23 @@
-Container Lab Guide
+# Container Lab Guide
 Welcome to the container lab! In this exercise, you will run a containerized application in three different environments: locally, Azure Container Instance (ACI), and Azure Container Apps (ACA). Each environment will return a unique letter, and by the end, you’ll have all the letters needed for the final answer.
 
 Each user will work in their own Azure environment, using their own container registry and services.
 
-Prerequisites
+# Prerequisites
 Azure Subscription: Ensure you have access to an Azure subscription.
 Docker Installed: Make sure Docker is installed on your local machine.
 Azure CLI Installed: You’ll need the Azure CLI to interact with Azure services.
 Azure Container Registry (ACR): You’ll use your own ACR to store container images for ACI and ACA.
-Steps
-1. Clone the Repository
+
+## Steps
+## 1. Clone the Repository
 First, clone the repository to your local workstation:
 
 bash
 Copy code
 git clone https://github.com/yourusername/your-repo.git
 cd your-repo
-2. Set Up Your Azure Container Registry (ACR)
+## 2. Set Up Your Azure Container Registry (ACR)
 Create a Resource Group (if you don’t have one):
 
 bash
@@ -34,7 +35,7 @@ Copy code
 az acr login --name <your-registry-name>
 Replace <your-resource-group>, <your-registry-name>, and <region> with your specific values.
 
-3. Run the Container Locally
+## 3. Run the Container Locally
 In this step, you will use Dockerfile.local to build and run the container locally.
 
 Build the Docker Image:
@@ -50,7 +51,7 @@ docker run letter-local
 Check the Output:
 You should see a letter for the local environment displayed in the console.
 
-4. Deploy to Azure Container Instance (ACI)
+## 4. Deploy to Azure Container Instance (ACI)
 In this step, you’ll build and push the image to ACR, then deploy it to Azure Container Instance.
 
 Build the Docker Image for ACI:
@@ -83,7 +84,7 @@ Replace <unique-dns-label> with a unique DNS name for your container.
 Replace <your-acr-password> with the password for your Azure Container Registry (you can retrieve it from the ACR’s Access keys section in the Azure Portal).
 View the Output in Logs: Go to the Azure Portal > Container Instances > letter-aci > Logs to view the letter output for aci.
 
-5. Deploy to Azure Container Apps (ACA)
+## 5. Deploy to Azure Container Apps (ACA)
 This step involves deploying the container to Azure Container Apps.
 
 Create a Container Apps Environment (if not already created):
