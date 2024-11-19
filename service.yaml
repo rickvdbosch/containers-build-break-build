@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: letter-service
+spec:
+  type: LoadBalancer  # Expose the service to the internet
+  selector:
+    app: letter-app
+  ports:
+    - protocol: TCP
+      port: 80  # Public port
+      targetPort: 5000  # Maps to the container's internal port

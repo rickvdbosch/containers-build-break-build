@@ -1,0 +1,21 @@
+# Use Python as the base image
+FROM python:3.9-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the application code
+COPY request_letter.py /app
+
+# Install dependencies
+RUN pip install requests
+
+# Expose the port used by the application
+EXPOSE 5000
+
+# Set the ENVIRONMENT variable to "kubernetes"
+ENV ENVIRONMENT=kubernetes
+
+# Run the script
+CMD ["sh", "-c", "python request_letter.py && sleep infinity"]
+

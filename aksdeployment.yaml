@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: letter-deployment
+  labels:
+    app: letter-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: letter-app
+  template:
+    metadata:
+      labels:
+        app: letter-app
+    spec:
+      containers:
+      - name: letter-container
+        image: bootcamp25cr.azurecr.io/aks-container-image:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: ENVIRONMENT
+          value: "kubernetes"  # Ensure consistency with the Dockerfile
+        - name: API_URL
+          value: "https://bootcamp25.azurewebsites.net/get-letter"
+        - name: X_SOURCE
+          value: "kubernetes"
+        - name: X_SECRET
+          value: "kubernetes-secret-value"

@@ -17,7 +17,12 @@ HEADERS = {
     "containerapps": {
         "X-Source": "containerapps",
         "X-Secret": "containerapps-secret-value"
+    },
+    "kubernetes": {
+        "X-Source": "kubernetes",
+        "X-Secret": "kubernetes-secret-value"
     }
+    
 }
 
 def get_letter(environment):
