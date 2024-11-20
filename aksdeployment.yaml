@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: letter-container
-        image: bootcamp25cr.azurecr.io/aks-container-image:latest
+        image: <your-acr-name>.azurecr.io/<your-image-name>:<your-tag-name>
         ports:
         - containerPort: 5000
         env:
