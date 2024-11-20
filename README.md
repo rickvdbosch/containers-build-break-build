@@ -2,7 +2,8 @@
 
 ## VS Code extensions
 
-Please install the VS Code [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter).
+Please install the VS Code [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter).  
+(_There's an `extensions.json` file in the repo that will recommend this extension._)
 
 ## Local tools
 
