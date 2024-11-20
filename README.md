@@ -15,3 +15,5 @@ Please install the VS Code [Jupyter extension](https://marketplace.visualstudio.
 ## Next: get to work
 
 * Open the Container_Lab_Guide.ipynb notebook in VS Code
+
+I am stupid
