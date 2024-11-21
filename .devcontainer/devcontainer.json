@@ -12,7 +12,13 @@
 			"installDockerComposeSwitch": true,
 			"version": "latest",
 			"dockerDashComposeVersion": "none"
-		},
-    "ghcr.io/devcontainers/features/azure-cli:1": {}
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-toolsai.jupyter"
+			]
+		}		
 	}
 }
